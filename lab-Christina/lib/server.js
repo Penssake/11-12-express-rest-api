@@ -1,8 +1,10 @@
 'use strict';
 
-const express = require('express');
+const express = require('express');//
 const app = express();
-let isOn = false;
+const mongoose = require('mongoose');
+//enable promises
+let isOn = false;//variable for our server
 let http = null;
 let PORT = 3000;
 
