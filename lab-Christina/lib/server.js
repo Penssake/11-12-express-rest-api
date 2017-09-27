@@ -1,12 +1,17 @@
 'use strict';
 
 const express = require('express');//
-const app = express();
+const app = express();//creates a new instance of an app without new keyword.
 const mongoose = require('mongoose');
 //enable promises
 let isOn = false;//variable for our server
 let http = null;
 let PORT = 3000;
+
+app.use(require('./logger-middleware.js'));
+app.use(require('../route/character-router.js'));
+app.all('*', (req, res) => res.sendStatus(404));
+app.use(require('./error-middleware.js'));
 
 module.exports = {
   start: () => {
