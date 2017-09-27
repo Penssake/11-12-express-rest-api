@@ -1,0 +1,29 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "description": "creating an express server",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node index.js",
+    "test": "jest -i --coverage",
+    "dbon": "mkdir -p ./db && mongod --dbpath ./db",
+    "dboff": "killall mongod"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.5",
+    "mongoose": "^4.11.13",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.12.1"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "jest": "^21.1.0",
+    "superagent": "^3.6.0"
+  }
+}
